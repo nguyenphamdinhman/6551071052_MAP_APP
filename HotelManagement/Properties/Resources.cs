@@ -238,6 +238,72 @@ internal static class Resources
         g.DrawString("🛋️", font, Brushes.Black, new RectangleF(0, 0, w, h), sf);
     });
 
+    public static Image Add => CreateGraphic(32, 32, (g, w, h) =>
+    {
+        g.Clear(Color.Transparent);
+        using var bgBr = new SolidBrush(Color.FromArgb(230, 247, 235));
+        g.FillEllipse(bgBr, 2, 2, 28, 28);
+        using var pen = new Pen(Color.FromArgb(39, 174, 96), 2f);
+        g.DrawEllipse(pen, 2, 2, 28, 28);
+        using var p = new Pen(Color.FromArgb(39, 174, 96), 2.5f);
+        g.DrawLine(p, 16, 8, 16, 24);
+        g.DrawLine(p, 8, 16, 24, 16);
+    });
+
+    public static Image Huy => CreateGraphic(32, 32, (g, w, h) =>
+    {
+        g.Clear(Color.Transparent);
+        using var bgBr = new SolidBrush(Color.FromArgb(253, 237, 236));
+        g.FillEllipse(bgBr, 2, 2, 28, 28);
+        using var pen = new Pen(Color.FromArgb(231, 76, 60), 2f);
+        g.DrawEllipse(pen, 2, 2, 28, 28);
+        using var p = new Pen(Color.FromArgb(231, 76, 60), 2.5f);
+        g.DrawLine(p, 10, 10, 22, 22);
+        g.DrawLine(p, 22, 10, 10, 22);
+    });
+
+    public static Image delete_icon => delete;
+
+    public static Image DichVu => CreateGraphic(32, 32, (g, w, h) =>
+    {
+        g.Clear(Color.Transparent);
+        using var bgBr = new SolidBrush(Color.FromArgb(254, 243, 199));
+        g.FillEllipse(bgBr, 2, 2, 28, 28);
+        using var font = new Font("Segoe UI Emoji", 11.5f);
+        using var sf = new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center };
+        g.DrawString("☕", font, Brushes.Black, new RectangleF(0, 0, w, h), sf);
+    });
+
+    public static Image TienNghi => CreateGraphic(32, 32, (g, w, h) =>
+    {
+        g.Clear(Color.Transparent);
+        using var bgBr = new SolidBrush(Color.FromArgb(235, 245, 251));
+        g.FillEllipse(bgBr, 2, 2, 28, 28);
+        using var font = new Font("Segoe UI Emoji", 11.5f);
+        using var sf = new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center };
+        g.DrawString("🛋️", font, Brushes.Black, new RectangleF(0, 0, w, h), sf);
+    });
+
+    public static Image KhachHang => CreateGraphic(32, 32, (g, w, h) =>
+    {
+        g.Clear(Color.Transparent);
+        using var bgBr = new SolidBrush(Color.FromArgb(236, 253, 245));
+        g.FillEllipse(bgBr, 2, 2, 28, 28);
+        using var font = new Font("Segoe UI Emoji", 11.5f);
+        using var sf = new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center };
+        g.DrawString("🛎️", font, Brushes.Black, new RectangleF(0, 0, w, h), sf);
+    });
+
+    public static Image NhanVien => CreateGraphic(32, 32, (g, w, h) =>
+    {
+        g.Clear(Color.Transparent);
+        using var bgBr = new SolidBrush(Color.FromArgb(243, 232, 255));
+        g.FillEllipse(bgBr, 2, 2, 28, 28);
+        using var font = new Font("Segoe UI Emoji", 11.5f);
+        using var sf = new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center };
+        g.DrawString("👥", font, Brushes.Black, new RectangleF(0, 0, w, h), sf);
+    });
+
     public static void FillRoundedRectangle(this Graphics g, Brush brush, int x, int y, int width, int height, int radius)
     {
         using var path = new GraphicsPath();
